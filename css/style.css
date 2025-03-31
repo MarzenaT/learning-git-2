@@ -1,19 +1,58 @@
+/* Zmienne dla kolorów */
+$primary-color: #2c3e50;
+$secondary-color: #ecf0f1;
+$highlight-color: #2980b9;
+$background-color: #f4f4f4;
+
+/* Resetowanie marginesów i paddingów */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $primary-color;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: $highlight-color;
+  font-weight: bold;
+}
+
+.poem {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-top: 20px;
 }
 
 p {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .poem {
+    font-size: 1.1rem;
+  }
 }
